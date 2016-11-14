@@ -1,0 +1,509 @@
+
+html,body {
+  height:1000px;
+ 
+}
+header{
+	 
+}
+
+.wrapper {
+    height:     auto;       /* These two lines were the key. */
+    min-height: 100%;
+    
+}
+
+
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px);
+}
+.parallax {
+    /* The image used */
+    background-image:url(../images/page%201.jpg);
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+article {
+	
+	height:1000px;
+	width:100%;
+	background:;
+	
+}
+.article1 {
+	
+	height:1000px;
+	width:100%;
+	background:;
+}
+
+
+body {
+  background: -webkit-radial-gradient(#E4CEA6, #9C8763);
+  background: radial-gradient(#E4CEA6, #9C8763);
+  -webkit-perspective: 900px;
+          perspective: 900px;
+  margin: 0;
+}
+#flip {
+  -webkit-animation: wrapper 6s ease-in-out infinite;
+          animation: wrapper 6s ease-in-out infinite;
+  height: 350px;
+  width: 253px; 
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translateZ(-10px) rotateX(60deg) rotateZ(29deg) rotateY(0deg)!important;
+          transform: translateZ(-10px) rotateX(60deg) rotateZ(29deg) rotateY(0deg)!important;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 0 0 0;
+          transform-origin: 0 0 0;
+}
+@-webkit-keyframes wrapper {
+  50% {
+    -webkit-transform: translateZ(-10px) rotateX(60deg) rotateZ(29deg) rotateY(-180deg);
+            transform: translateZ(-10px) rotateX(60deg) rotateZ(29deg) rotateY(-180deg);
+  }
+}
+@keyframes wrapper {
+  50% {
+    -webkit-transform: translateZ(-10px) rotateX(60deg) rotateZ(29deg) rotateY(-180deg);
+            transform: translateZ(-10px) rotateX(60deg) rotateZ(29deg) rotateY(-180deg);
+  }
+}
+#flip div {
+  height: 350px;
+  width: 24px;
+  position: absolute;
+  left: calc(100% - 1px);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background-size: 253px 350px;
+}
+#flip #front, 
+#flip #front div {
+  background-image: url(http://www.santjordi-asociados.com/sites/default/files/Eleven%20minutes.jpg);
+  box-shadow: inset rgba(255,255,255,0.3) 0px -1px 0 0,#e64b33 0px 1px 0px 0px;
+}
+#flip #front > div > div > div > div > div > div > div > div > div > div { 
+  box-shadow: inset rgba(255,255,255,0.3) -1px -1px 0 0,#e64b33 1px 1px 0px 0px;
+}
+#flip #back { -webkit-transform: rotateY(.4deg); transform: rotateY(.4deg); -webkit-transform-origin: -100% 0; transform-origin: -100% 0; } /* avoid pages overlap */
+#flip #back,
+#flip #back div {
+  background-image:url(../images/page%201.jpg);
+}
+
+#flip > div {  left: 0;  background-position-x: 0; }
+#flip div > div { background-position-x: -23px; -webkit-animation: page 6s ease-in-out infinite; animation: page 6s ease-in-out infinite; }
+#flip div > div > div { background-position-x : -46px; } 
+#flip div > div > div > div { background-position-x : -69px; }
+#flip div > div > div > div > div { background-position-x : -92px; }
+#flip div > div > div > div > div > div { background-position-x : -115px; }
+#flip div > div > div > div > div > div > div { background-position-x : -138px; }
+#flip div > div > div > div > div > div > div > div  { background-position-x : -161px; }
+#flip div > div > div > div > div > div > div > div > div { background-position-x : -184px; }
+#flip div > div > div > div > div > div > div > div > div > div { background-position-x : -207px; }
+#flip div > div > div > div > div > div > div > div > div > div > div { background-position-x : -229px; }
+/* the more pieces you have, the smoother the bend is */
+
+@-webkit-keyframes page {
+  15% { -webkit-transform: rotateY(-10deg); transform: rotateY(-10deg); }
+  50% { -webkit-transform: rotateY(-2deg); transform: rotateY(-2deg); }
+  65% { -webkit-transform: rotateY(10deg); transform: rotateY(10deg); }
+  100% { -webkit-transform: rotateY(0deg); transform: rotateY(0deg); }
+}
+
+@keyframes page {
+  15% { -webkit-transform: rotateY(-10deg); transform: rotateY(-10deg); }
+  50% { -webkit-transform: rotateY(-2deg); transform: rotateY(-2deg); }
+  65% { -webkit-transform: rotateY(10deg); transform: rotateY(10deg); }
+  100% { -webkit-transform: rotateY(0deg); transform: rotateY(0deg); }
+}
+
+#book {
+  width: 248px;
+  height: 350px;
+  position: absolute;
+  left:50%;
+  top: 30%;
+  -webkit-transform: translate3d(0px,0px,-10px) rotateX(60deg) rotateZ(29deg);
+          transform: translate3d(0px,0px,-10px) rotateX(60deg) rotateZ(29deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 0 0 0;
+}
+@-webkit-keyframes book {
+  25% {
+    box-shadow: inset rgba(0,0,0,.2) 0px 0 50px -140px;
+  }
+  50% {
+    box-shadow: inset rgba(0,0,0,.2) 0px 0 50px -140px;
+  }
+  100% {
+    box-shadow: inset rgba(0,0,0,.2) 510px 0 50px -140px;
+  }
+}
+@keyframes book {
+  25% {
+    box-shadow: inset rgba(0,0,0,.2) 0px 0 50px -140px;
+  }
+  50% {
+    box-shadow: inset rgba(0,0,0,.2) 0px 0 50px -140px;
+  }
+  100% {
+    box-shadow: inset rgba(0,0,0,.2) 510px 0 50px -140px;
+  }
+}
+#book #top {
+  -webkit-animation: book 6s ease-in-out infinite;
+          animation: book 6s ease-in-out infinite;
+  background:url(../images/page%202.jpg);
+  background-size: 100% 100%;
+  background-position: 100%;
+  box-shadow: inset rgba(0,0,0,0.2) 510px 0 50px -140px;
+  height: 350px;
+  width: 248px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#book #bottom {
+  background: #E7DED1;
+  box-shadow: rgba(83, 53, 13, 0.2) 4px 2px 1px,#e64b33 1px 1px 0px 0px;
+  height: 350px;
+  width: 253px;
+  position: absolute;
+  -webkit-transform: translateZ(-40px);
+          transform: translateZ(-40px);
+  left: 0;
+  top: 0;
+}
+#book #shadow {
+  -webkit-animation: shadow 6s ease-in-out infinite;
+          animation: shadow 6s ease-in-out infinite;
+  box-shadow: inset rgba(83, 53, 13, 0) -200px 0 150px -140px;
+  height: 350px;
+  width: 248px;
+  position: absolute;
+  left: -100%;
+  top: 0;
+  -webkit-transform: translateZ(-40px);
+          transform: translateZ(-40px);
+}
+@-webkit-keyframes shadow {
+  20% {
+    box-shadow: inset rgba(83, 53, 13, 0) -200px 0 150px -140px;
+  }
+  50% { 
+    box-shadow: inset rgba(83, 53, 13, 0.3) -350px 0 150px -140px;
+  }
+  60% { 
+    box-shadow: inset rgba(83, 53, 13, 0) -200px 0 150px -140px;
+  }
+}
+@keyframes shadow {
+  20% {
+    box-shadow: inset rgba(83, 53, 13, 0) -200px 0 150px -140px;
+  }
+  50% { 
+    box-shadow: inset rgba(83, 53, 13, 0.3) -350px 0 150px -140px;
+  }
+  60% { 
+    box-shadow: inset rgba(83, 53, 13, 0) -200px 0 150px -140px;
+  }
+}
+#book #front {
+  background: -webkit-linear-gradient(top,#FCF6EA, #D8D1C3);
+  background-size: 100% 2px; 
+  box-shadow: inset #C2BBA2 3px 0 0px,#e64b33 -2px 1px 0px 0px;
+  height: 40px;
+  width: 251px;
+    left: -3px;
+  position: absolute;
+  bottom: -40px;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#book #right {
+  background: -webkit-linear-gradient(left,#DDD2BB, #BDB3A0);
+  background-size: 2px 100%; 
+  box-shadow: inset rgba(0,0,0,0) 0 0 0 20px;
+  height: 100%;
+  width: 40px;
+  position: absolute;
+  right: -40px;
+  top: 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+}
+
+h4 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  font-weight: 200;
+  opacity: 1;
+	font-family: sans-serif;
+  color: rgba(0,0,0,0.3); 
+}
+
+/* bookmark */
+
+#bookmark {
+  position: absolute;
+  -webkit-transform: translate3d(20px,350px,-16px);
+          transform: translate3d(20px,350px,-16px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+#bookmark div {
+  background: rgb(151, 88, 88);
+  box-shadow: rgb(133,77,77) 1px 0;
+  height: 10px;
+  width: 20px;
+  position: absolute;
+  top: 9px;
+  -webkit-transform: rotateX(-14deg);
+          transform: rotateX(-14deg);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+#bookmark > div > div {
+  background: -webkit-linear-gradient(top, rgb(151, 88, 88), rgb(189, 123, 123), rgb(151, 88, 88));
+  background: linear-gradient(top, rgb(151, 88, 88), rgb(189, 123, 123), rgb(151, 88, 88));
+}
+#bookmark > div > div > div {
+  background: -webkit-linear-gradient(top,rgb(151, 88, 88),rgb(133, 77, 77));
+  background: linear-gradient(top,rgb(151, 88, 88),rgb(133, 77, 77));
+}
+#bookmark > div > div > div > div {
+  background: none;
+  border-top: 0px solid transparent;
+  border-right: 10px solid rgb(133, 77, 77);
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid rgb(133, 77, 77);
+  height: 0;
+  width: 0;
+}
+#bookmark-shadow {
+  background: -webkit-linear-gradient(top,rgba(83, 53, 13, 0.25),rgba(83, 53, 13, 0.11));
+  background: linear-gradient(top,rgba(83, 53, 13, 0.25),rgba(83, 53, 13, 0.11));
+  height: 15px;
+  width: 20px;
+  position: absolute;
+  -webkit-transform: translate3d(12px,350px,-25px) rotateX(-90deg) skewX(20deg);
+          transform: translate3d(12px,350px,-25px) rotateX(-90deg) skewX(20deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+	width: 200px;
+    background-color: #f1f1f1;
+	opacity: 0.5;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+div1 {
+    position: absolute;
+    margin: auto;
+    top: 700px; bottom: 2px;
+    left: 0; right: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    line-height: 40px;
+    -webkit-animation: bounce 2s infinite ease-in-out;
+}
+@-webkit-keyframes bounce {
+	0%, 20%, 60%, 100%  { -webkit-transform: translateY(0); }
+    40%  { -webkit-transform: translateY(-20px); }
+	80% { -webkit-transform: translateY(-10px); }
+}
+#home {
+  clip-path: url(#cache);
+}
+
+#red {
+  fill: none;
+  opacity: 0.15;
+  stroke: #CE1B5F;
+  stroke-width: 12;
+  stroke-miterlimit:10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; 
+}
+
+#blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06A1C4;
+  stroke-width: 12;
+  stroke-miterlimit:10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#light-blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06A1C4;
+  stroke-width: 6;
+  stroke-miterlimit:10;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 800;
+  animation: draw 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;    
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+ }
+    }
+
+@keyframes show {
+  0% {
+    opacity: 0.15;
+ }
+  50% {
+    opacity: 0.2;
+ }
+  100% {
+    opacity: 0.15;
+ }
+    }
+
+body {
+  padding:0;
+  margin:0;
+}
+.container {
+  position: relative;
+  height:100vh;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+.c11 {
+  background-image:url(../images/banner1.jpg);
+  text-align:center;
+}
+
+
+.c1 {
+  background-image:url(../images/design2.jpg);
+ 
+}
+.c3 {
+  background-image:url(../images/design5.jpg);
+}
+
+
+.c4 {
+  background-image:url(../images/design6.jpg);
+}
+.c5 {
+  background-image:url(../images/design7.jpg);
+}
+.c6 {
+  background-image:url(../images/design8.jpg);
+}
+.c7 {
+  background-image:url(../images/design9.jpg);
+}
+.c8 {
+  background-image:url(../images/design10.jpg);
+}
+.c9 {
+  background-image:url(../images/design11.jpg);
+}
+.c10 {
+  background-image:url(../images/design12.jpg);
+}
+.c12 {
+  background-image:url(../images/design13.jpg);
+}
+
+.c13 {
+  background-image:url(../images/design14.jpg);
+}
+.c14 {
+  background-image:url(../images/design15.jpg);
+}
+.c15 {
+  background-image:url(../images/design16.jpg);
+}
+
+
+
+
+
+
+
+
+
+	
