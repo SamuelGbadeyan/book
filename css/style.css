@@ -336,6 +336,9 @@ h4 {
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
 }
+nav{
+  position: fixed;
+}
 ul {
     list-style-type: none;
     margin: 10px;
@@ -497,7 +500,7 @@ body {
 .c15 {
   background-image:url(../images/design16.jpg);
 }
-
+its not what you get that makes you valueable its what you become
 
 
 
